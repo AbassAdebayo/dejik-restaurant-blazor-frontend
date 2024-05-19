@@ -1,0 +1,84 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+
+<div class="container-fluid">
+    <div class="row align-items-center hero-section">
+        <div class="col-md-3 text-center">
+            <img src="images/logo.png" class="logo img-fluid" alt="Dejik Restaurant Logo">
+        </div>
+        <div class="col-md-9">
+            <div id="restaurantCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slide2.jpg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slide3.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <h1 class="display-4">Welcome to Dejik Restaurant</h1>
+        <p class="lead">Experience the best dining with us!</p>
+        <div class="button-group mt-4">
+            <a href="signup" class="btn btn-outline-light btn-lg">Invite Employee</a>
+            <a href="login" class="btn btn-outline-light btn-lg">Login</a>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <h2 class="mb-4">Our Delicious Dishes</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="images/dish1.jpg" class="img-fluid rounded mb-3" alt="Dish 1">
+            <h3>Delicious Cuisine</h3>
+            <p>Our dishes are made with the freshest ingredients.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/dish2.jpg" class="img-fluid rounded mb-3" alt="Dish 2">
+            <h3>Cozy Atmosphere</h3>
+            <p>Enjoy your meal in a comfortable and welcoming environment.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/dish3.jpg" class="img-fluid rounded mb-3" alt="Dish 3">
+            <h3>Exceptional Service</h3>
+            <p>Our staff is dedicated to making your dining experience memorable.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="images/dish4.jpg" class="img-fluid rounded mb-3" alt="Dish 4">
+            <h3>Gourmet Meals</h3>
+            <p>Indulge in our gourmet meals prepared by top chefs.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/dish5.jpg" class="img-fluid rounded mb-3" alt="Dish 5">
+            <h3>Healthy Options</h3>
+            <p>Choose from a variety of healthy and tasty options.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/dish6.jpg" class="img-fluid rounded mb-3" alt="Dish 6">
+            <h3>Exquisite Desserts</h3>
+            <p>Don't miss our exquisite desserts to complete your meal.</p>
+        </div>
+    </div>
+</div>
+
+<link href="css/home.css" rel="stylesheet">

@@ -1,0 +1,86 @@
+.hero-section {
+    background: url('/images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.hero-section .carousel-item {
+    height: 400px;
+}
+
+.hero-section .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-section .btn {
+    margin: 10px;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero-section .btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-section .btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.img-fluid {
+    max-height: 400px;
+}
+
+.lead {
+    font-size: 1.25rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .row.text-center h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.container .row img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.container .row h3 {
+    color: #333;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.container .row p {
+    color: #666;
+    font-size: 1rem;
+}
