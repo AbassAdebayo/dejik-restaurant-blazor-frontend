@@ -1,0 +1,83 @@
+@page "/login"
+
+<head>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+        <label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up">
+        <label for="tab-2" class="tab">Invite Employee</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+                    <DataAnnotationsValidator />
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <InputText id="user" class="input" @bind-Value="loginModel.Email" />
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <InputText id="pass" type="password" class="input" @bind-Value="loginModel.Password" />
+                    </div>
+                    <div class="group">
+                        <InputCheckbox id="check" class="check" @bind-Value="loginModel.KeepSignedIn" />
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <button type="submit" class="button">Sign In</button>
+                    </div>
+                </EditForm>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <a href="#forgot">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="sign-up-htm">
+                <EditForm Model="@inviteModel" OnValidSubmit="HandleInvite">
+                    <DataAnnotationsValidator />
+                    <div class="group">
+                        <label for="invite-email" class="label">Email</label>
+                        <InputText id="invite-email" class="input" @bind-Value="inviteModel.Email" />
+                    </div>
+                    <div class="group">
+                        <button type="submit" class="button">Invite</button>
+                    </div>
+                </EditForm>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <label for="tab-1">Already Member?</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private InviteModel inviteModel = new InviteModel();
+
+    private void HandleLogin()
+    {
+        // Handle login logic here
+    }
+
+    private void HandleInvite()
+    {
+        // Handle invite logic here
+    }
+
+    public class LoginModel
+    {
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+        public bool KeepSignedIn { get; set; }
+    }
+
+    public class InviteModel
+    {
+        public string? Email { get; set; }
+    }
+}
